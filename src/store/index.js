@@ -5,11 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    sum: 0,
+    lastTeam: '',
   },
   mutations: {
+    counter(state) {
+      state.sum++
+    }
   },
   actions: {
-  },
-  modules: {
+    countUp(context) {
+      context.commit('counter')
+    }
   }
 })
